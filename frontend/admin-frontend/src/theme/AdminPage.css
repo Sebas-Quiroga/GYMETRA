@@ -1,0 +1,222 @@
+/* AdminPage - Aero Athletic Design */
+
+/* Stats Cards Section */
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: var(--admin-bg-card);
+  padding: 2rem;
+  border-radius: var(--admin-radius-xl);
+  border: 1px solid var(--admin-border);
+  box-shadow: var(--admin-shadow-sm);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--admin-shadow-md);
+  border-color: var(--brand-primary);
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--brand-primary-fade);
+  border-radius: var(--admin-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.stat-icon ion-icon {
+  font-size: 1.5rem;
+  color: var(--brand-primary);
+}
+
+.stat-number {
+  font-family: var(--app-font-family);
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--brand-secondary);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-weight: 800;
+  color: var(--text-main);
+  font-size: 1rem;
+}
+
+.stat-subtitle {
+  color: var(--text-sub);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* User Specific Cells */
+.user-info-cell { display: flex; flex-direction: column; }
+.user-full-name { font-weight: 800; font-family: var(--app-font-brand); }
+.user-email-sub { font-size: 0.8rem; color: var(--admin-text-sub); }
+.user-phone { font-size: 0.9rem; }
+.user-id-badge { font-family: monospace; font-weight: 700; }
+.user-date { font-size: 0.8rem; color: var(--admin-text-sub); }
+.empty-table-cell { text-align: center; padding: 60px; }
+.empty-icon { font-size: 48px; color: var(--admin-accent-soft); }
+.empty-text { margin-top: 15px; font-weight: 700; color: var(--admin-text-sub); }
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.sync-users-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 18px;
+  background: var(--admin-bg-card);
+  color: var(--brand-primary);
+  border: 1px solid var(--admin-border);
+  border-radius: var(--admin-radius-md);
+  font-family: var(--app-font-brand);
+  font-weight: 800;
+  cursor: pointer;
+  transition: var(--admin-transition);
+}
+
+.sync-users-btn:hover:not(:disabled) {
+  background: var(--admin-accent-soft);
+  border-color: var(--brand-primary);
+  transform: translateY(-2px);
+}
+
+.sync-users-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Modern Toggle */
+.kinetic-toggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.kinetic-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider-kinetic {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: var(--admin-border);
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.toggle-slider-kinetic:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+input:checked + .toggle-slider-kinetic {
+  background-color: var(--brand-primary);
+}
+
+input:checked + .toggle-slider-kinetic:before {
+  transform: translateX(24px);
+}
+
+/* Pagination UI */
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px;
+  background: var(--admin-bg-subtle);
+  border-radius: var(--admin-radius-md);
+  border: 1px solid var(--admin-border);
+}
+
+.pagination-info {
+  font-size: 0.88rem;
+  color: var(--admin-text-sub);
+  font-weight: 700;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pagination-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: 1px solid var(--admin-border);
+  background: var(--admin-bg-card);
+  color: var(--admin-text-main);
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.86rem;
+  font-weight: 800;
+  transition: var(--admin-transition);
+  min-width: 40px;
+  justify-content: center;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: var(--admin-accent-soft);
+  border-color: var(--brand-primary);
+  color: var(--brand-primary);
+  transform: translateY(-1px);
+  box-shadow: none;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-btn.active {
+  background: var(--brand-primary);
+  border-color: var(--brand-primary);
+  color: white;
+}

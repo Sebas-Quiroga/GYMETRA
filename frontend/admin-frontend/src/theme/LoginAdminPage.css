@@ -1,0 +1,170 @@
+/* LoginAdminPage - Aero Athletic Design */
+
+.admin-login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--admin-bg-page);
+  padding: 20px;
+}
+
+.login-card {
+  background: var(--admin-bg-card);
+  width: 100%;
+  max-width: 440px;
+  padding: 40px;
+  border-radius: var(--admin-radius-xl);
+  border: 1px solid var(--admin-border);
+  box-shadow: var(--admin-shadow-lg);
+  animation: slideIn 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  text-align: center;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Logo Section */
+.logo-section {
+  margin-bottom: 2rem;
+}
+
+.logo-kinetic {
+  width: 80px;
+  height: auto;
+  margin-bottom: 1rem;
+  filter: var(--logo-filter);
+}
+
+.brand-name-card {
+  font-family: var(--app-font-family);
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: var(--brand-secondary);
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.brand-tagline {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.admin-badge {
+  display: inline-block;
+  background: var(--admin-bg-subtle);
+  color: var(--brand-primary);
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 1rem;
+  border: 1px solid var(--admin-border);
+}
+
+/* Form Styling */
+.login-form {
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-weight: 800;
+  font-size: 0.7rem;
+  color: var(--admin-text-sub);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.input-wrapper-kinetic {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper-kinetic ion-icon {
+  position: absolute;
+  left: 1rem;
+  font-size: 1.25rem;
+  color: var(--admin-text-muted);
+  pointer-events: none;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem;
+  background: var(--admin-bg-subtle);
+  border: 1px solid transparent;
+  border-radius: var(--admin-radius-md);
+  color: var(--admin-text-main);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--brand-primary);
+  background: var(--admin-bg-card);
+  box-shadow: 0 0 0 4px var(--brand-primary-fade);
+}
+
+/* Button */
+.login-btn {
+  width: 100%;
+  padding: 1rem;
+  background: var(--brand-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--admin-radius-md);
+  font-weight: 800;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 8px 16px var(--brand-primary-fade);
+}
+
+/* Links & Footer */
+.forgot-password-link {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--brand-primary);
+  text-decoration: none;
+}
+
+.login-footer {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: var(--admin-text-sub);
+}
+
+.contact-link {
+  color: var(--brand-primary);
+}
+
+.back-link {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--admin-border);
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: var(--admin-text-muted);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 auto;
+  cursor: pointer;
+}

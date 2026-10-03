@@ -1,0 +1,177 @@
+/* ReportesPage KINETIC Design - Stitch UI Standards */
+
+.dashboard-content {
+  animation: kinetic-view-enter 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes kinetic-view-enter {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header */
+.dashboard-header {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.dashboard-header h1 {
+  font-family: var(--app-font-brand);
+  font-weight: 900;
+  font-size: 2.2rem;
+  color: var(--admin-text-main);
+  letter-spacing: -1.5px;
+  margin-bottom: 6px;
+}
+
+.last-update {
+  font-size: 0.9rem;
+  color: var(--admin-text-sub);
+  font-weight: 600;
+}
+
+/* Section Styling */
+.reports-tables-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.main-content {
+  margin-left: var(--admin-sidebar-width);
+  padding: 40px;
+  background-color: var(--admin-bg-page);
+  min-height: 100vh;
+  height: 100vh;
+  overflow-y: auto;
+  transition: var(--admin-transition);
+}
+
+.sidebar-collapsed-active .main-content {
+  margin-left: var(--admin-sidebar-collapsed-width);
+}
+
+.main-content-mobile {
+  margin-left: 0 !important;
+  padding: 80px 20px 40px;
+  height: auto;
+  min-height: 100vh;
+}
+
+.chart-card {
+  background: var(--admin-bg-card);
+  border-radius: var(--admin-radius-lg);
+  border: 1px solid var(--admin-border);
+  box-shadow: var(--admin-shadow-md);
+  overflow: hidden;
+  transition: var(--admin-transition);
+}
+
+.chart-card:hover {
+  box-shadow: var(--admin-shadow-lg);
+}
+
+.chart-header {
+  padding: 24px 35px;
+  background: linear-gradient(to right, var(--admin-accent-soft), transparent 50%);
+  border-bottom: 1px solid var(--admin-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chart-header h3 {
+  font-family: var(--app-font-brand);
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--admin-text-main);
+  margin: 0;
+}
+
+/* Table Customization for Reports */
+.payments-history-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.payments-history-table th {
+  padding: 16px 35px;
+  background: var(--admin-bg-subtle);
+  color: var(--admin-text-sub);
+  font-weight: 900;
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.payments-history-table td {
+  padding: 18px 35px;
+  border-bottom: 1px solid var(--admin-border);
+  font-weight: 600;
+  color: var(--admin-text-main);
+  font-size: 0.9rem;
+}
+
+.payments-history-table tr:hover td {
+  background: rgba(4, 184, 229, 0.02);
+}
+
+/* Badges */
+.status-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-active, .status-completed {
+  background: rgba(39, 174, 96, 0.1);
+  color: #27ae60;
+}
+
+.status-suspended, .status-failed {
+  background: rgba(186, 26, 26, 0.1);
+  color: #ba1a1a;
+}
+
+.status-pending {
+  background: rgba(255, 152, 0, 0.1);
+  color: #f39c12;
+}
+
+/* Report Buttons Integration (The component styling is inherited from its own buttons) */
+
+/* Loading row */
+.loading-row td {
+  background: var(--admin-bg-subtle);
+  color: var(--admin-text-sub);
+}
+
+.loading-spinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid var(--admin-accent-soft);
+  border-top-color: var(--admin-accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .chart-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}

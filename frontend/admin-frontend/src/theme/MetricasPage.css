@@ -1,0 +1,162 @@
+/* MetricasPage - Aero Athletic Analytic Design */
+
+.dashboard-content {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header */
+.dashboard-header {
+  margin-bottom: 2.5rem;
+}
+
+.dashboard-header h1 {
+  font-family: var(--app-font-family);
+  font-weight: 900;
+  font-size: 2.5rem;
+  color: var(--brand-secondary);
+  letter-spacing: -1px;
+  margin: 0 0 0.5rem;
+}
+
+.last-update {
+  font-size: 0.9rem;
+  color: var(--text-sub);
+  font-weight: 700;
+}
+
+/* KPI Grid */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.kpi-card {
+  background: var(--admin-bg-card);
+  padding: 1.5rem;
+  border-radius: var(--admin-radius-xl);
+  border: 1px solid var(--admin-border);
+  box-shadow: var(--admin-shadow-sm);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--admin-shadow-md);
+  border-color: var(--brand-primary);
+}
+
+.kpi-icon {
+  width: 52px;
+  height: 52px;
+  background: var(--brand-primary-fade);
+  border-radius: var(--admin-radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-primary);
+  font-size: 1.5rem;
+}
+
+.kpi-value {
+  font-family: var(--app-font-family);
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--brand-secondary);
+  line-height: 1;
+}
+
+.kpi-label {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-top: 0.25rem;
+}
+
+/* Charts Section */
+.charts-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.chart-card {
+  background: var(--admin-bg-card);
+  border-radius: var(--admin-radius-xl);
+  border: 1px solid var(--admin-border);
+  box-shadow: var(--admin-shadow-sm);
+  padding: 2rem;
+}
+
+.chart-header h3 {
+  font-family: var(--app-font-family);
+  font-weight: 900;
+  font-size: 1.25rem;
+  color: var(--brand-secondary);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Custom Chart Styles */
+.pie-center-text {
+  font-family: var(--app-font-family);
+  font-weight: 900;
+  fill: var(--brand-secondary);
+}
+
+.pie-center-label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  fill: var(--text-muted);
+  text-transform: uppercase;
+}
+
+/* Plan Popularity */
+.plan-bar {
+  background: var(--admin-bg-subtle);
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.plan-bar-fill {
+  background: linear-gradient(90deg, var(--brand-primary), #00BCD4);
+  height: 100%;
+  border-radius: 4px;
+}
+
+/* Metric Items */
+.metric-item {
+  background: var(--admin-bg-subtle);
+  padding: 1.25rem;
+  border-radius: var(--admin-radius-lg);
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.metric-value {
+  font-family: var(--app-font-family);
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--brand-secondary);
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--brand-primary);
+  text-transform: uppercase;
+}
